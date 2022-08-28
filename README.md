@@ -1,0 +1,1 @@
+# Pagina_vision_maquina
