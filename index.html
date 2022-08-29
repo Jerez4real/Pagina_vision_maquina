@@ -5,38 +5,71 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-
+  
   <title>Producto I Corte</title>
 </head>
 <body>
+
+<!-- NAV BAR -->
+<nav class="navbar">
+  <div class="brand-title"> <img src="https://cdn.icon-icons.com/icons2/665/PNG/512/robot_icon-icons.com_60269.png" alt="logo" width="32" height="32"></div>
+  <a href="#" class="toggle-button">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </a>
+  <div class="navbar-links">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- End Nav Bar -->
+
+
+
+
+
   <div id="wrapper">
-    <h1 class="heading">Vision de Maquina</h1>
+    <h1 class="heading">Vision Artificial en Robotica</h1>
     <div id="mainContent">
       
       <div id="videoSizer">
         <div id="videoWrapper">
-          <iframe name="tutorial" width="560" height="315" src="https://www.youtube.com/embed/w0ffwDYo00Q?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+          <iframe name="tutorial" width="560" height="315" src="https://www.youtube.com/embed/Y4s8CyMFW-I?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
         </div>
-        <h1 id="tutVidTitle">Video 1</h1>
+        <h1 id="tutVidTitle">✅ Modelo Pinhole</h1>
       </div>
       <div id="videoList">
-          <a href="https://www.youtube.com/embed/w0ffwDYo00Q;showinfo=0" target="tutorial">Video 1</a>
-          <a href="https://www.youtube.com/embed/4rb8aOzy9t4;showinfo=0" target="tutorial">Video 2</a>
-          <a href="https://www.youtube.com/embed/OsOYg5gpS0s;showinfo=0" target="tutorial">Video 3</a>
-          <a href="https://www.youtube.com/embed/A3JC24p0YsA;showinfo=0" target="tutorial">Video 4</a>
-          <a href="https://www.youtube.com/embed/I1qHVVbYG8Y;showinfo=0" target="tutorial">Video 5</a>
+          <a class="name-video" href="https://www.youtube.com/embed/Y4s8CyMFW-I;showinfo=0" target="tutorial">✅ Modelo Pinhole</a>
+          <a class="name-video" href="https://www.youtube.com/embed/0L--DZtDiis;showinfo=0" target="tutorial">✅ Distorsiones</a>
+          <a  class="name-video"href="https://www.youtube.com/embed/1fPFkkP6KcE;showinfo=0" target="tutorial">✅ Calibracion</a>
+          <a class="name-video" href="https://www.youtube.com/embed/TZBKZObuzkQ;showinfo=0" target="tutorial">✅ Agoritmo de Deteccion del Robot</a>
+          <a class="name-video" href="https://www.youtube.com/embed/bx0iODJG5Qg;showinfo=0" target="tutorial">✅ Modelo Robot</a>
       </div>
     </div>
   </div>
 </body>
 <script>
-  var link = document.getElementsByTagName('a'),
+  var link = document.getElementsByClassName('name-video'),
     tutVid = document.getElementById('tutVidTitle');
+  
 
 for(var i=0; i<5; i++){
   link[i].onclick = function(){
     tutVid.innerHTML = this.innerHTML;
   };
 }
+
+
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+
 </script>
 </html>
